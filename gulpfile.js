@@ -26,7 +26,7 @@ gulp.task('styles', ['styles-sass', 'styles-minify'], function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('concat-page0', ['concat-page1', 'concat-page2', 'concat-page3', 'concat-page4'], function() {
+gulp.task('concat-page0', ['concat-page1', 'concat-page2', 'concat-page3', 'concat-page4', 'concat-page5'], function() {
     return gulp.src([
             '_header.html',
             'page0.html',
@@ -69,6 +69,15 @@ gulp.task('concat-page4', function() {
             '_footer.html'
         ])
         .pipe(concat('about'))
+        .pipe(gulp.dest('.'));
+});
+gulp.task('concat-page5', function() {
+    return gulp.src([
+            '_header.html',
+            'page5.html',
+            '_footer.html'
+        ])
+        .pipe(concat('chiropractors-good-resource-nutrition-advice'))
         .pipe(gulp.dest('.'));
 });
 
