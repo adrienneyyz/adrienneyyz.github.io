@@ -32,6 +32,10 @@ header {
             padding: 0 1.25rem;
             float: left;
 
+            a:hover {
+                color: $color-accent;
+            }
+
             &.social {
                 padding-top: 12px;
                 float: right;
@@ -41,9 +45,32 @@ header {
                 i {
                     margin-right: 10px;
                 }
+            }
 
-                a:hover {
-                    color: $color-accent;
+            &.navigation {
+                font-size: 20px;
+                margin-left: 30px;
+                margin-top: 12px;
+
+                li {
+                    float: left;
+                    margin-right: 20px;
+
+                    &:after {
+                        content: "|";
+                        margin-left: 20px;
+                        font-size: 15px;
+
+                    }
+
+                    &:last-of-type {
+                        margin-right: 0;
+
+                        &:after {
+                            content: "";
+                            margin-left: 0;
+                        }
+                    }
                 }
             }
         }
@@ -58,7 +85,61 @@ header {
     }
 
     & > .left-wrap {
-        width: 60%;
+        width: 58%;
+        margin-top: 20px;
+        padding: 0 1%;
+
+        & > .article {
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: dotted 1px $color-divider;
+            margin-bottom: 40px;
+
+            .title {
+                font-family: Lustria;
+                font-size: 32px;
+                line-height: 36px;
+
+                a {
+                    color: $color-primary-text;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+
+            .author {
+                color: $color-accent;
+                font-size: 12px;
+                margin: 5px 0 20px;
+            }
+
+            .read-more {
+                float: right;
+
+                a {
+                    color: $color-primary;
+
+                    &:hover {
+                        color: $color-dark-primary;
+                    }
+                }
+            }
+
+            a {
+                color: $color-primary;
+
+                &:hover {
+                    color: $color-dark-primary;
+                }
+            }
+
+            &.single {
+                border-bottom: none;
+            }
+        }
     }
 
     .right-wrap {
@@ -131,7 +212,7 @@ header {
                 }
             }
 
-            .article {
+            & > .article {
                 position: relative;
                 border: solid 1px $color-light-primary;
                 font-size: 0px;
@@ -225,9 +306,29 @@ footer {
 
 /*****[ General ]**************************************************************/
 
+p {
+    margin-bottom: 10px;
+}
+
 h3 {
     font-family: Lato;
     /* 24px */
     font-size: 1.5rem;
     text-align: center;
+}
+
+.affiliation-logos {
+    margin: 20px 0;
+
+    img {
+        height: 50px;
+    }
+
+    a {
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
 }

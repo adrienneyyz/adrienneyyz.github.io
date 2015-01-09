@@ -234,6 +234,8 @@ header {
     header .bar div {
       padding: 0 1.25rem;
       float: left; }
+      header .bar div a:hover {
+        color: #FF9800; }
       header .bar div.social {
         padding-top: 12px;
         float: right;
@@ -241,15 +243,61 @@ header {
         transition: all 0.3s ease; }
         header .bar div.social i {
           margin-right: 10px; }
-        header .bar div.social a:hover {
-          color: #FF9800; }
+      header .bar div.navigation {
+        font-size: 20px;
+        margin-left: 30px;
+        margin-top: 12px; }
+        header .bar div.navigation li {
+          float: left;
+          margin-right: 20px; }
+          header .bar div.navigation li:after {
+            content: "|";
+            margin-left: 20px;
+            font-size: 15px; }
+          header .bar div.navigation li:last-of-type {
+            margin-right: 0; }
+            header .bar div.navigation li:last-of-type:after {
+              content: "";
+              margin-left: 0; }
 
 .main-wrap {
   overflow: hidden; }
   .main-wrap .wrap {
     float: left; }
   .main-wrap > .left-wrap {
-    width: 60%; }
+    width: 58%;
+    margin-top: 20px;
+    padding: 0 1%; }
+    .main-wrap > .left-wrap > .article {
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: dotted 1px #B6B6B6;
+      margin-bottom: 40px; }
+      .main-wrap > .left-wrap > .article .title {
+        font-family: Lustria;
+        font-size: 32px;
+        line-height: 36px; }
+        .main-wrap > .left-wrap > .article .title a {
+          color: #212121; }
+          .main-wrap > .left-wrap > .article .title a:hover {
+            color: #4CAF50; }
+      .main-wrap > .left-wrap > .article .author {
+        color: #FF9800;
+        font-size: 12px;
+        margin: 5px 0 20px; }
+      .main-wrap > .left-wrap > .article .read-more {
+        float: right; }
+        .main-wrap > .left-wrap > .article .read-more a {
+          color: #4CAF50; }
+          .main-wrap > .left-wrap > .article .read-more a:hover {
+            color: #388E3C; }
+      .main-wrap > .left-wrap > .article a {
+        color: #4CAF50; }
+        .main-wrap > .left-wrap > .article a:hover {
+          color: #388E3C; }
+      .main-wrap > .left-wrap > .article.single {
+        border-bottom: none; }
   .main-wrap .right-wrap {
     width: 39%;
     border-left: solid 1px #B6B6B6; }
@@ -294,12 +342,12 @@ header {
           border-bottom: none; }
         .main-wrap .right-wrap .right-sub-wrap li a:hover {
           color: #388E3C; }
-      .main-wrap .right-wrap .right-sub-wrap .article {
+      .main-wrap .right-wrap .right-sub-wrap > .article {
         position: relative;
         border: solid 1px #C8E6C9;
         font-size: 0px;
         margin-bottom: 20px; }
-        .main-wrap .right-wrap .right-sub-wrap .article .title {
+        .main-wrap .right-wrap .right-sub-wrap > .article .title {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -309,7 +357,7 @@ header {
           font-size: 1rem;
           font-weight: 400;
           transition: all 0.3s ease; }
-        .main-wrap .right-wrap .right-sub-wrap .article:hover .title {
+        .main-wrap .right-wrap .right-sub-wrap > .article:hover .title {
           background: #C8E6C9;
           color: #388E3C; }
 
@@ -359,8 +407,20 @@ footer {
       color: #FF9800; }
 
 /*****[ General ]**************************************************************/
+p {
+  margin-bottom: 10px; }
+
 h3 {
   font-family: Lato;
   /* 24px */
   font-size: 1.5rem;
   text-align: center; }
+
+.affiliation-logos {
+  margin: 20px 0; }
+  .affiliation-logos img {
+    height: 50px; }
+  .affiliation-logos a {
+    margin-right: 20px; }
+    .affiliation-logos a:last-of-type {
+      margin-right: 0; }
