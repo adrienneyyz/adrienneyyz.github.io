@@ -1,0 +1,233 @@
+@import '_config';
+@import '_reset';
+@import '_fonts';
+@import '_fontello';
+
+body {
+    background-color: $color-background;
+    font-family: Lato;
+    font-weight: 300;
+}
+
+header {
+    position: relative;
+    height: 110px;
+    background: url(../img/header-background.jpg);
+
+    .bar {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: $color-primary-text;
+        color: $color-text;
+        font-family: Lato;
+        /* 40px */
+        font-size: 2.5rem;
+        /* 12px / 20px */
+        padding: .75rem 0;
+        border-top: solid 1px $color-accent;
+        border-bottom: solid 1px $color-accent;
+
+        div {
+            padding: 0 1.25rem;
+            float: left;
+
+            &.social {
+                padding-top: 12px;
+                float: right;
+                font-size: 20px;
+                transition: all .3s ease;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                a:hover {
+                    color: $color-accent;
+                }
+            }
+        }
+    }
+}
+
+.main-wrap {
+    overflow: hidden;
+
+    .wrap {
+        float: left;
+    }
+
+    & > .left-wrap {
+        width: 60%;
+    }
+
+    .right-wrap {
+        width: 39%;
+        border-left: solid 1px $color-divider;
+
+        .left-sub-wrap {
+            width: 36%;
+            margin: 20px 1% 20px 2%;
+
+            li {
+                border-bottom: dotted 1px $color-divider;
+                /* 10px */
+                padding: .625rem;
+                font-family: Lustria;
+                transition: all .4s ease;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    background: $color-light-primary;
+
+                    a:hover {
+                        color: $color-dark-primary;
+                    }
+                }
+
+                .category {
+                    font-family: Lato;
+                    font-weight: bold;
+                    font-size: .8rem;
+                    text-transform: uppercase;
+                    color: $color-accent;
+                }
+
+                .small {
+                    font-family: Lato;
+                    /* 12px */
+                    font-size: .75rem;
+                }
+            }
+        }
+
+        .right-sub-wrap {
+            width: 57%;
+            margin: 20px 1%;
+            border-left: none;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            ul {
+                margin-bottom: 20px;
+            }
+
+            li {
+                font-size: 14px;
+                padding: 2px;
+                border-bottom: dotted 1px $color-divider;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                a:hover {
+                    color: $color-dark-primary;
+                }
+            }
+
+            .article {
+                position: relative;
+                border: solid 1px $color-light-primary;
+                font-size: 0px;
+                margin-bottom: 20px;
+
+                .title {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: $color-light-primary-faded;
+                    padding: 5px;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    transition: all .3s ease;
+                }
+
+                &:hover {
+                    .title {
+                        background: $color-light-primary;
+                        color: $color-dark-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-form {
+    padding-bottom: 20px;
+    margin: 10px 0 20px;
+    border-bottom: dotted 1px $color-divider;
+
+    .label {
+        float: left;
+        width: 25%;
+    }
+
+    input {
+        clear: left;
+        width: 68%;
+        border: solid 1px $color-divider;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        padding: 0.44444rem;
+        margin-bottom: .5rem;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    button {
+        padding-top: 0.55556rem;
+        padding-right: 1.11111rem;
+        padding-bottom: 0.61111rem;
+        padding-left: 1.11111rem;
+        background-color: $color-light-primary;
+        border: solid 1px $color-primary;
+        cursor: pointer;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    background-image: url(../img/header-background.jpg);
+    padding-top: 10px;
+
+    .bar {
+        width: 100%;
+        background: $color-primary-text;
+        color: $color-text;
+        font-family: Lato;
+        font-size: .75rem;
+        /* 12px / 20px */
+        padding: .75rem 0;
+        border-top: solid 1px $color-accent;
+
+        div {
+            padding: 0 1.25rem;
+        }
+
+        a {
+            color: $color-accent;
+        }
+    }
+}
+
+/*****[ General ]**************************************************************/
+
+h3 {
+    font-family: Lato;
+    /* 24px */
+    font-size: 1.5rem;
+    text-align: center;
+}
