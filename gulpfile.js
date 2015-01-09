@@ -26,7 +26,7 @@ gulp.task('styles', ['styles-sass', 'styles-minify'], function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('concat-page0', ['concat-page1', 'concat-page2'], function() {
+gulp.task('concat-page0', ['concat-page1', 'concat-page2', 'concat-page3', 'concat-page4'], function() {
     return gulp.src([
             '_header.html',
             'page0.html',
@@ -52,11 +52,30 @@ gulp.task('concat-page2', function() {
         ])
         .pipe(concat('chiropractic-best-effective-personal-primary-healthcare-option'))
         .pipe(gulp.dest('.'));
-})
+});
+gulp.task('concat-page3', function() {
+    return gulp.src([
+            '_header.html',
+            'page3.html',
+            '_footer.html'
+        ])
+        .pipe(concat('pregnancy-chiropractic-care'))
+        .pipe(gulp.dest('.'));
+});
+gulp.task('concat-page4', function() {
+    return gulp.src([
+            '_header.html',
+            'page4.html',
+            '_footer.html'
+        ])
+        .pipe(concat('about'))
+        .pipe(gulp.dest('.'));
+});
 
 gulp.task('watch', function() {
     gulp.watch('src/*.scss', ['style']);
     gulp.watch('page*.html', ['concat-page0']);
+    gulp.watch('_*.html', ['concat-page0']);
     // gulp.watch('page1.html', ['concat-page0']);
     // gulp.watch('page2.html', ['concat-page0']);
 });

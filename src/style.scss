@@ -332,3 +332,26 @@ h3 {
         }
     }
 }
+
+.article-list {
+    li {
+        margin: 0 0 20px 20px;
+    }
+}
+
+.super {
+    vertical-align: super;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+.advert {
+    border-bottom: solid 1px $color-divider;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    img {
+        border: solid 1px $color-light-primary;
+        margin: 5px 0;
+    }
+}
